@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MuriNews</title>
     <link rel="stylesheet" href="./Styles/index_styles.css">
 </head>
 <body>
+    <!-- Header - both bars -->
+    <header class="header">
+        <section class="header_links">
+            <div class="header_links_logo">
+                <h1>MuriNews</h1>
+            </div>
+            <div class="header_links_items">
+                <ul>
+                    <li>Home</li>
+                    <li>Search</li>
+                </ul>
+            </div>
+        </section>
+        <section class="header_categories">
+            <ul class="header_categories_links">
+                <li onclick="setCategory('general')"><p>General</p></li>
+                <li onclick="setCategory('science')"><p>Science</p></li>
+                <li onclick="setCategory('sports')"><p>Sports</p></li>
+                <li onclick="setCategory('business')"><p>Business</p></li>
+                <li onclick="setCategory('health')"><p>Health</p></li>
+                <li onclick="setCategory('entertainment')"><p>Entertainment</p></li>
+                <li onclick="setCategory('tech')"><p>Tech</p></li>
+                <li onclick="setCategory('politics')"><p>Politics</p></li>
+                <li onclick="setCategory('food')"><p>Food</p></li>
+                <li onclick="setCategory('travel')"><p>Travel</p></li>
+            </ul>
+        </section>
+    </header>
+
+    <main>
+        <!-- main - starred news article -->
+        <section class="main_star_news">
+        </section>
+
+        <!-- main - all headlines news article -->
+        <section class="main_headlines_news">
+            <div class="headlines_grid">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer_links">
+            <div class="footer_links_logo">
+                <h2>MuriNews</h2>
+            </div>
+            <p> ©2023 MuriNews / Murillo News Calgary Canada. All rights reserved</p>
+            <ul class="socials">
+                <li><a href="https://www.linkedin.com/in/mauricio-murillo-69097522b/">Linkedin</a></li>
+                <li> <a href="https://github.com/MauriMurillo?tab=overview&from=2022-11-01&to=2022-11-30"> Github</a></li>
+            </ul>
+        </section>
+    </footer>
+    
     <script src="./Scripts/index.js"></script>
 </body>
 </html>
