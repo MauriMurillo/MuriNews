@@ -452,15 +452,21 @@ const fillArticleGrid = (headlineGrid, nodesListData,page) =>{
     let articleList = headlineGrid.childNodes;
     console.log(articleList);
     if (page == "1") {
-        for (let index = 1; index < 5; index++) {
+        for (let index = 1; index < 3; index++) {
             const gridElement = articleList[index];
             fillArticle(nodesListData[index],gridElement);
         }
     }else if(page == "2"){
         console.log("fillArticleGrid page 2")
-        for (let index = 5; index < 10; index++) {
+        for (let index = 3; index < 6; index++) {
             const gridElement = articleList[index];
-            fillArticle(nodesListData[index-5],gridElement);
+            fillArticle(nodesListData[index-3],gridElement);
+        }
+    }else if(page == "3"){
+        console.log("fillArticleGrid page 2")
+        for (let index = 6; index < 9; index++) {
+            const gridElement = articleList[index];
+            fillArticle(nodesListData[index-6],gridElement);
         }
     }
 };
@@ -485,7 +491,7 @@ const showApiResponse = (newsData,page) => {
 }
 const apiactivate = (searchCategory, page) =>{
     fetch(
-        `https://api.thenewsapi.com/v1/news/top?api_token=bhbnQy1PnjlwPLgjQ2xsmOdM5JVe8ZiA1BPWuuZo&locale=bo,us,ca,mx&language=en,es&categories=${searchCategory}&limit=5&page=${page}`,
+        `https://api.thenewsapi.com/v1/news/top?api_token=bhbnQy1PnjlwPLgjQ2xsmOdM5JVe8ZiA1BPWuuZo&locale=bo,us,ca,mx&language=en,es&categories=${searchCategory}&limit=3&page=${page}`,
     )
     .then((response) => response.json())
     .then((data) => {
@@ -500,3 +506,4 @@ fillGrid(headlineGrid);
 
 apiactivate(categoryVariable,"1");
 apiactivate(categoryVariable,"2");
+apiactivate(categoryVariable,"3");
